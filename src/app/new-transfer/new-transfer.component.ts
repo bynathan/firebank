@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./new-transfer.component.scss']
 })
 export class NewTransferComponent {
+  value: number;
+  for: string;
 
+ transfer(){
+  console.log('Tranferencia Firebank')
+  console.log(`Valor: ${this.value}`)
+  console.log(`Para: ${this.for}`)
+ }
 }
