@@ -1,0 +1,17 @@
+<section class="container">
+  <form class="form__transfer" (ngSubmit)="transfer()">
+    <img src="../../assets/img/icon.png" class="img__bank">
+    <h2 class="form__tranfer__title">Nova tranferência</h2>
+    <div class="form__content">
+      <label class="form__content--label" for="value">Valor</label>
+      <input class="form__content--input" id="value" type="text" [(ngModel)]="value" name="value">
+    </div>
+    <div class="form__content">
+      <label class="form__content--label" for="for">Para</label>
+      <input class="form__content--input" id="for" type="text" [(ngModel)]="for" name="for">
+    </div>
+    <div class="form__button">
+      <button class="button__transfer">Transferir</button>
+    </div>
+  </form>
+</section>
