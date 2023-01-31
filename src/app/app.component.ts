@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'firebank';
+
+  dadosTransfer: any;
+
+  transfer($event){
+    console.log($event);
+    this.dadosTransfer = $event
+  }
 }

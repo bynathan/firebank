@@ -6,10 +6,14 @@
   padding: 30px 16px;
   border-radius: 4px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-  &--title{
+  h2:nth-child(3){
+    margin: 0 0 20px 0;
+  }
+  &__title{
     text-transform: capitalize;
     color: var(--primary);
-    margin: 10px 0 10px 0;
+    margin: 10px 0 0 0;
+    color: #292929;
   }
 }
 

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { formatNumber } from '@angular/common';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-new-transfer',
@@ -6,12 +7,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./new-transfer.component.scss']
 })
 export class NewTransferComponent {
+  @Output() inTransfer = new EventEmitter<any>()
+
   value: number;
   for: string;
 
- transfer(){
-  console.log('Tranferencia Firebank')
-  console.log(`Valor: ${this.value}`)
-  console.log(`Para: ${this.for}`)
- }
+  transfer(){
+    console.log('Tranferencia Firebank');
+    const dadosInput = {value: this.value, for: this.for};
+    this.inTransfer.emit(dadosInput);
+    this.clearDados()
+  }
+
+  clearDados(){
+    this.value = 0;
+    this.for = '';
+  }
 }
