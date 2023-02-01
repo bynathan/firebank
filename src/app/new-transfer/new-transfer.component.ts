@@ -20,7 +20,7 @@ export class NewTransferComponent {
   }
 
   clearDados(){
-    this.value = 0;
+    this.value = Number('NaN');
     this.for = '';
   }
 }

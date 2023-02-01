@@ -8,10 +8,11 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'firebank';
 
-  dadosTransfer: any;
+  dadosTransfers: any[] = [];
 
   transfer($event){
-    console.log($event);
-    this.dadosTransfer = $event
+    const dadosTransfer = {...$event, data: new Date()}
+    console.log(dadosTransfer)
+    this.dadosTransfers.push(dadosTransfer);
   }
 }

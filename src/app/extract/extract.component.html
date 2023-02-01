@@ -1,0 +1,26 @@
+<div>
+  <table class="table">
+    <thead class="table__header">
+      <th class="table__header__content">Valor</th>
+      <th class="table__header__content">Para</th>
+      <th class="table__header__content">Data</th>
+    </thead>
+    <tbody *ngIf="dadosTransfers?.length > 0; else listOff">
+      <tr class="table__line" *ngFor="let transfer of dadosTransfers">
+        <td class="table__content">{{ transfer?.value | currency }}</td>
+        <td class="table__content">{{ transfer?.for }}</td>
+        <td class="table__content">{{ transfer?.data | date:'shortDate' }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <ng-template #listOff>
+    <tbody>
+      <tr class="table__line error">
+        <td class="table__content one"><p>Nenhuma</p></td>
+        <td class="table__content two"><p>operação</p></td>
+        <td class="table__content three"><p>cadastrada</p></td>
+      </tr>
+    </tbody>
+  </ng-template>
+
+</div>
