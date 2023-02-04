@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { TransferService } from './../services/transfer.service';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-extract',
@@ -6,5 +7,11 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./extract.component.scss']
 })
 export class ExtractComponent {
-  @Input() dadosTransfers: any[];
+  dadosTransfers: any[];
+
+  constructor(private service: TransferService){}
+
+  ngOnInit() {
+    this.dadosTransfers = this.service.transfer;
+  }
 }
