@@ -10,9 +10,4 @@ export class AppComponent {
   title = 'firebank';
 
   constructor(private service: TransferService){}
-
-  transfer($event){
-    console.log($event)
-    this.service.newTransfer($event)
-  }
 }

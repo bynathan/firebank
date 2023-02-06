@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { routes } from '../app.routing.module';
 import { NewTransferComponent } from './new-transfer.component';
 
 describe('NewTransferComponent', () => {
