@@ -5,7 +5,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## NPM
 
-Run `npm i` to download project dependencies.
+Run `npm i` to download project dependencies
 
 ## Development server
 
